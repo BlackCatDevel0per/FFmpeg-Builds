@@ -43,6 +43,7 @@ jobs:
     name: Build base image
     if: ${{ github.event.inputs.buildOnly != 'true' }}
     needs: pre_check
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
